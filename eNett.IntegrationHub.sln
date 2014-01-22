@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{4A28
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNett.IntegrationHub.SourceSystems.Client", "eNett.IntegrationHub.SourceSystems.Client\eNett.IntegrationHub.SourceSystems.Client.csproj", "{163DF64F-7621-4679-A735-F8E0DAF27F08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientIntegration", "ClientIntegration\ClientIntegration.csproj", "{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{163DF64F-7621-4679-A735-F8E0DAF27F08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163DF64F-7621-4679-A735-F8E0DAF27F08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{163DF64F-7621-4679-A735-F8E0DAF27F08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
