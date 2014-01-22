@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Client" Class="ClientDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Client;Integrated Security=True" SettingsObjectName="eNett.IntegrationHub.SourceSystems.Client.Properties.Settings" SettingsPropertyName="ClientConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Client" Member="Clients">
+    <Type Name="Client">
+      <Column Name="ECN" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TradingAs" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LegalName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TrustName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MerchantDescriptor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ClientTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultCurrencyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ClientStatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntityTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FeePaymentMethodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FeeInvoiceEmailAddress" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FeeMinimum" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ReceiveEmail" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Hidden" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ExpressSettlement" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AcceptsCC" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ActivationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinancialYearEnd" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="ParentECN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value1" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Value2" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Value3" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Value4" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Value5" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="IsSupplier" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Reported" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Timestamp" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Column Name="IsMasterDetailsSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsTramada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BillToECN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MSFTaxTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BillingEntityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientKey" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="ReferrerECN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PricingECN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientOrgId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClosedTradingHubGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="eNettMerchantTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SalesForceId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParentSalesForceId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DueDiligenceExpiry" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

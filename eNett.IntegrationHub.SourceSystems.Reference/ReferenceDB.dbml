@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Reference" Class="ReferenceDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Reference;Integrated Security=True" SettingsObjectName="eNett.IntegrationHub.SourceSystems.Reference.Properties.Settings" SettingsPropertyName="ReferenceConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClientType" Member="ClientTypes">
+    <Type Name="ClientType">
+      <Column Name="ClientTypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClientType" Member="ClientTypeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ClientTypeDesc" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Country" Member="Countries">
+    <Type Name="Country">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryCode2" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryCode3" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhonePrefix" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DefaultCurrencyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultRegionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Locale" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TaxType" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TimeZone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TimeOffset" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TestECN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DebitCutOffTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DefaultTimeZoneID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

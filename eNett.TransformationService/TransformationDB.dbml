@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Transformation" Class="TransformationDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Transformation;Integrated Security=True" SettingsObjectName="eNett.IntegrationHub.TransformationService.Properties.Settings" SettingsPropertyName="TransformationConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SourceSystem" Member="SourceSystems">
+    <Type Name="SourceSystem">
+      <Column Name="SourceSystemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SourceSystem_Mapping" Member="Mappings" ThisKey="SourceSystemID" OtherKey="DestinationSystemID" Type="Mapping" />
+      <Association Name="SourceSystem_Mapping1" Member="Mappings1" ThisKey="SourceSystemID" OtherKey="SourceSystemID" Type="Mapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mapping" Member="Mappings">
+    <Type Name="Mapping">
+      <Column Name="MappingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SourceSystemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DestinationSystemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SourceTableName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DestinationTableName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceColumnName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DestinationColumnName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="SourceSystem_Mapping" Member="DestinationSystem" Storage="_SourceSystem" ThisKey="DestinationSystemID" OtherKey="SourceSystemID" Type="SourceSystem" IsForeignKey="true" />
+      <Association Name="SourceSystem_Mapping1" Member="SourceSystem" Storage="_SourceSystem1" ThisKey="SourceSystemID" OtherKey="SourceSystemID" Type="SourceSystem" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
