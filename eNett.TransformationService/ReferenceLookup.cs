@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eNett.IntegrationHub.TransformationService
 {
-    public abstract class ReferenceLookup : Transformation
+    public abstract class ReferenceLookup : Lookup
     {        
         protected IReferenceRepository ReferenceRepository { get; set; }
 

@@ -52,9 +52,14 @@ namespace eNett.IntegrationHub.TransformationService
                     {
                         destinationChange.Fields.Add(transformation.Apply(field));
                     }
-                    catch (Exception e)
+                    catch (TransformationException e)
                     {
                         _logger.Log(e.Message);
+
+                        if (e.SuggestedAction == TransformationException.Action.Fail)
+                        {
+                            throw e;
+                        }
                     }                    
                 }
             }

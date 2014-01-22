@@ -36,6 +36,13 @@ namespace eNett.IntegrationHub.TransformationService
 
             destinationField.Value = this.ReferenceRepository.GetClientTypeByClientTypeID(Convert.ToInt32(sourceField.Value));
 
+            if (destinationField.Value == string.Empty)
+            {
+                throw new TransformationException(
+                    string.Format("Lookup ClientTypeLookup failed: value '{0}' does not exist",
+                        sourceField.Value), TransformationException.Action.Log);
+            }
+
             return destinationField;
         }
     }

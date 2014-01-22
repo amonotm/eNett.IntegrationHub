@@ -7,8 +7,8 @@ using eNett.IntegrationHub.BusinessObjects;
 
 namespace eNett.IntegrationHub.TransformationService
 {
-    public abstract class Lookup 
+    public abstract class Lookup : Transformation
     {
-            
+
     }
 }

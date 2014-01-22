@@ -114,6 +114,34 @@ namespace eNett.IntegrationHub.UnitTest
             mockLogger.Verify(l => l.Log(It.IsAny<string>()), Times.Once);
         }
 
+        [TestMethod]
+        public void Transformer_Transform_TransformTest_LookupValueNotFound()
+        {
+            string sourceSystem = "Client";
+            string destinationSystem = "SalesForce";
+            string sourceTableName = "Client";
+            string sourceColumnName = "ClientStatusID";
+            string value = "9999999";
+
+            var mockLogger = new Mock<ILogger>();
+            mockLogger.Setup(l => l.Log(It.IsAny<string>()));
+
+            var mockReferenceRepository = new Mock<IReferenceRepository>();
+            mockReferenceRepository.Setup(c => c.GetClientTypeByClientTypeID(It.IsAny<int>())).Returns(string.Empty);
+
+            Transformer transformer =
+                new Transformer(SetupMockTransformationRepository(new List<Mapping>(), sourceSystem, destinationSystem, sourceTableName),
+                    mockReferenceRepository.Object, null, mockLogger.Object);
+
+            Change change = new Change();
+            change.TableName = sourceTableName;
+            change.Fields.Add(new Field { Name = sourceColumnName, Value = value });
+
+            var result = transformer.Transform(change, sourceSystem, destinationSystem, sourceTableName);
+
+            mockLogger.Verify(l => l.Log(It.IsAny<string>()), Times.Once);
+        }
+
         private ITransformationRepository SetupMockTransformationRepository(List<Mapping> mappings, string sourceSystem, string destinationSystem, string sourceTableName)
         {
             var mockTransformationRepository = new Mock<ITransformationRepository>();

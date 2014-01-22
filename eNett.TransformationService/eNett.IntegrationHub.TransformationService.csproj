@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Client Lookups\AccountIDLookup.cs" />
     <Compile Include="ClientLookup.cs" />
+    <Compile Include="TransformationException.cs" />
     <Compile Include="ReferenceLookup.cs" />
     <Compile Include="Reference Lookups\ClientTypeLookup.cs" />
     <Compile Include="Reference Lookups\CountryCode3Lookup.cs" />

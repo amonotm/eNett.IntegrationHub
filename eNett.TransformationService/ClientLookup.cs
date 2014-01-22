@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eNett.IntegrationHub.TransformationService
 {
-    public abstract class ClientLookup : Transformation
+    public abstract class ClientLookup : Lookup
     {        
         protected IClientRepository ClientRepository { get; set; }
 

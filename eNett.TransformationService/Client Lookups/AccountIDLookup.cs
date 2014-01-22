@@ -23,9 +23,25 @@ namespace eNett.IntegrationHub.TransformationService
 
         public override Field Apply(Field sourceField)
         {
+            int ecn;
+
+            if (!Int32.TryParse(sourceField.Value, out ecn))
+            {
+                throw new Exception(
+                    string.Format("Lookup AccountTDLookup failed: '{0}' cannot be converted to an integer",
+                        sourceField.Value));
+            }
+
             var destinationField = new Field { Name = this.DestinationColumn };
 
-            destinationField.Value = this.ClientRepository.GetSalesForceIDByECN(Convert.ToInt32(sourceField.Value));
+            destinationField.Value = this.ClientRepository.GetSalesForceIDByECN(Convert.ToInt32(ecn));
+
+            if (destinationField.Value == string.Empty)
+            {
+                throw new TransformationException(
+                    string.Format("Lookup AccountIDLookup failed: value '{0}' does not exist",
+                        sourceField.Value), TransformationException.Action.Fail);
+            }
 
             return destinationField;
         }
