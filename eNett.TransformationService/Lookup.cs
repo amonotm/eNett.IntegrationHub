@@ -9,6 +9,6 @@ namespace eNett.IntegrationHub.TransformationService
 {
     public abstract class Lookup 
     {
-        public      
+            
     }
 }
