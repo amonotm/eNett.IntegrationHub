@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Transformation" Class="TransformationDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Transformation;Integrated Security=True" SettingsObjectName="eNett.IntegrationHub.TransformationService.Properties.Settings" SettingsPropertyName="TransformationConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Integration;Integrated Security=True" SettingsObjectName="eNett.IntegrationHub.TransformationService.Properties.Settings" SettingsPropertyName="TransformationConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.SourceSystem" Member="SourceSystems">
     <Type Name="SourceSystem">
       <Column Name="SourceSystemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

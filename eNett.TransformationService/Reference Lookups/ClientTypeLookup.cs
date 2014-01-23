@@ -27,9 +27,9 @@ namespace eNett.IntegrationHub.TransformationService
 
             if (!Int32.TryParse(sourceField.Value, out clientTypeID))
             {
-                throw new Exception(
+                throw new TransformationException(
                     string.Format("Lookup ClientTypeLookup failed: '{0}' cannot be converted to an integer",
-                        sourceField.Value));
+                        sourceField.Value), TransformationException.Action.Log);
             }
 
             var destinationField = new Field { Name = this.DestinationColumn };

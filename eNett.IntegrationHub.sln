@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNett.IntegrationHub.Source
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientIntegration", "ClientIntegration\ClientIntegration.csproj", "{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNett.IntegrationHub.Data", "eNett.IntegrationHub.Data\eNett.IntegrationHub.Data.csproj", "{972EAB82-615A-404A-A924-A1E847FCC463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972EAB82-615A-404A-A924-A1E847FCC463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972EAB82-615A-404A-A924-A1E847FCC463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972EAB82-615A-404A-A924-A1E847FCC463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972EAB82-615A-404A-A924-A1E847FCC463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

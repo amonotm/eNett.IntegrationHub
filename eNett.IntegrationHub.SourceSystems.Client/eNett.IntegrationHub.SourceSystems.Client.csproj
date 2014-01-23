@@ -74,6 +74,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Enett.IntegrationHub.BusinessObjects\eNett.IntegrationHub.BusinessObjects.csproj">
+      <Project>{09119eb0-240c-4d55-b7b2-917ffd565492}</Project>
+      <Name>eNett.IntegrationHub.BusinessObjects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\eNett.IntegrationHub.SharedInterfaces\eNett.IntegrationHub.SharedInterfaces.csproj">
       <Project>{46a4279f-ac06-4c70-b9ef-841aae58be7a}</Project>
       <Name>eNett.IntegrationHub.SharedInterfaces</Name>

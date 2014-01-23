@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace eNett.IntegrationHub.TransformationService.Properties {
+namespace eNett.IntegrationHub.Data.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -27,9 +27,9 @@ namespace eNett.IntegrationHub.TransformationService.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=Integration;Integrated Security=True")]
-        public string TransformationConnectionString {
+        public string IntegrationConnectionString {
             get {
-                return ((string)(this["TransformationConnectionString"]));
+                return ((string)(this["IntegrationConnectionString"]));
             }
         }
     }
