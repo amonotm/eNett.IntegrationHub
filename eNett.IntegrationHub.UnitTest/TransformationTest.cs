@@ -62,7 +62,7 @@ namespace eNett.IntegrationHub.UnitTest
             string destinationSystem = "SalesForce";
             string sourceTableName = "Client";
             string destinationTableName = "Account";
-            string sourceColumnName = "ClientStatusID";
+            string sourceColumnName = "ClientTypeID";
             string destinationColumnName = "Client_Type_Description__c";
             string sourceValue = "9";
             string destinationValue = "Corporate";
@@ -95,7 +95,7 @@ namespace eNett.IntegrationHub.UnitTest
             string sourceSystem = "Client";
             string destinationSystem = "SalesForce";
             string sourceTableName = "Client";
-            string sourceColumnName = "ClientStatusID";
+            string sourceColumnName = "ClientTypeID";
             string value = "a";
 
             var mockLogger = new Mock<ILogger>();
@@ -120,7 +120,7 @@ namespace eNett.IntegrationHub.UnitTest
             string sourceSystem = "Client";
             string destinationSystem = "SalesForce";
             string sourceTableName = "Client";
-            string sourceColumnName = "ClientStatusID";
+            string sourceColumnName = "ClientTypeID";
             string value = "9999999";
 
             var mockLogger = new Mock<ILogger>();

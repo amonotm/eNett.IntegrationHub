@@ -30,6 +30,13 @@ namespace eNett.IntegrationHub.SourceSystems.Client
             {
                 
             }
+
+            throw new NotImplementedException();
+        }
+
+        public List<Change> GetModifiedClientContacts(DateTime updateTime)
+        {
+            throw new NotImplementedException();
         }
     }
 }

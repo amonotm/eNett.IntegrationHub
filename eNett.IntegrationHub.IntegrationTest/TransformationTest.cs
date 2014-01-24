@@ -18,7 +18,7 @@ namespace eNett.IntegrationHub.IntegrationTest
             change.TableName = "Client";
             change.Fields.Add(new Field { Name = "LegalName", Value = "Test Company" });
             change.Fields.Add(new Field { Name = "TradingAs", Value = "Test Company 1" });
-            change.Fields.Add(new Field { Name = "ClientStatusID", Value = "9" });
+            change.Fields.Add(new Field { Name = "ClientTypeID", Value = "9" });
             change.Fields.Add(new Field { Name = "CountryID", Value = "36" });
 
             Transformer transformer = new Transformer(new TransformationRepository(), new ReferenceRepository(), new ClientRepository(), null);

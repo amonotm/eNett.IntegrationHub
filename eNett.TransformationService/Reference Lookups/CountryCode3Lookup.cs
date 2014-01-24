@@ -23,11 +23,8 @@ namespace eNett.IntegrationHub.TransformationService
 
         public override Field Apply(Field sourceField)
         {
-            var destinationField = new Field { Name = this.DestinationColumn };
-
-            destinationField.Value = this.ReferenceRepository.GetCountryCode3ByCountryID(Convert.ToInt32(sourceField.Value));
-
-            return destinationField;
+            return this.ApplyLookup(sourceField, this.ReferenceRepository.GetCountryCode3ByCountryID,
+                TransformationException.Action.Log);
         }
     }
 }

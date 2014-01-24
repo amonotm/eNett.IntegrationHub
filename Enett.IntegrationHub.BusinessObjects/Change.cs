@@ -16,10 +16,14 @@ namespace eNett.IntegrationHub.BusinessObjects
         public Change(object sourceObject, string tableName, string systemName)
         {
             Fields = new List<Field>();
+            TableName = tableName;
+            SystemName = systemName;
 
             foreach (var property in sourceObject.GetType().GetProperties())
             {
-                Fields.Add(new Field {Name = property.Name, Value = property.GetValue(sourceObject).ToString()});
+                var value = property.GetValue(sourceObject);                
+
+                Fields.Add(new Field {Name = property.Name, Value = value });
             }
         }
 

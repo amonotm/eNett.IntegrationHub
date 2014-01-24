@@ -22,21 +22,8 @@ namespace eNett.IntegrationHub.TransformationService
 
         public override Field Apply(Field sourceField)
         {
-            int countryID;
-
-            if (!Int32.TryParse(sourceField.Value, out countryID))
-            {
-                throw new Exception(
-                    string.Format("Lookup CountryNameLookup failed: '{0}' cannot be converted to an integer",
-                        sourceField.Value));
-            }
-
-            var destinationField = new Field { Name = this.DestinationColumn };
-
-            destinationField.Value =
-                this.ReferenceRepository.GetCountryNameByCountryID(Convert.ToInt32(sourceField.Value));
-
-            return destinationField;
+            return this.ApplyLookup(sourceField, this.ReferenceRepository.GetCountryNameByCountryID,
+                TransformationException.Action.Log);
         }
     }
 }
