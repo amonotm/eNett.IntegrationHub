@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\packages\RabbitMQ.Client.3.2.1\lib\net30\RabbitMQ.Client.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -52,11 +55,17 @@
   <ItemGroup>
     <Compile Include="TransformationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClientRepositoryTest.cs" />
+    <Compile Include="MessageBrokerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Enett.IntegrationHub.BusinessObjects\eNett.IntegrationHub.BusinessObjects.csproj">
       <Project>{09119eb0-240c-4d55-b7b2-917ffd565492}</Project>
       <Name>eNett.IntegrationHub.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eNett.IntegrationHub.MessageBroker\eNett.IntegrationHub.Messaging.csproj">
+      <Project>{ae7f3768-5308-4698-af1a-6186c4cd260a}</Project>
+      <Name>eNett.IntegrationHub.Messaging</Name>
     </ProjectReference>
     <ProjectReference Include="..\eNett.IntegrationHub.SharedInterfaces\eNett.IntegrationHub.SharedInterfaces.csproj">
       <Project>{46a4279f-ac06-4c70-b9ef-841aae58be7a}</Project>
@@ -74,6 +83,9 @@
       <Project>{e889b11a-7fbd-4f8d-ae2a-89fb959d433a}</Project>
       <Name>eNett.IntegrationHub.TransformationService</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -21,9 +21,29 @@ namespace eNett.IntegrationHub.BusinessObjects
 
             foreach (var property in sourceObject.GetType().GetProperties())
             {
-                var value = property.GetValue(sourceObject);                
+                if (!property.PropertyType.FullName.Contains("eNett"))              // ensure that custom types are not sent in the change as receiver may not reference it
+                {
+                    var value = property.GetValue(sourceObject);
 
-                Fields.Add(new Field {Name = property.Name, Value = value });
+                    Fields.Add(new Field { Name = property.Name, Value = value });   
+                }
+            }
+        }
+
+        public void LoadObject<T>(T destinationObject)
+        {
+            foreach (var field in this.Fields)
+            {
+                 var property = destinationObject.GetType().GetProperty(field.Name);
+
+                if (property != null)
+                {
+                    property.SetValue(destinationObject, field.Value);
+                }
+                else
+                {
+                    throw new Exception("Property {0} on mapped object {1} does not exist on actual object. Ensure mapping is up to date.");
+                }
             }
         }
 

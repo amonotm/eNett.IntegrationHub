@@ -19,9 +19,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{4A28
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNett.IntegrationHub.SourceSystems.Client", "eNett.IntegrationHub.SourceSystems.Client\eNett.IntegrationHub.SourceSystems.Client.csproj", "{163DF64F-7621-4679-A735-F8E0DAF27F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientIntegration", "ClientIntegration\ClientIntegration.csproj", "{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNett.IntegrationHub.ClientIntegration", "ClientIntegration\eNett.IntegrationHub.ClientIntegration.csproj", "{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNett.IntegrationHub.Data", "eNett.IntegrationHub.Data\eNett.IntegrationHub.Data.csproj", "{972EAB82-615A-404A-A924-A1E847FCC463}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eNett.IntegrationHub.Messaging", "eNett.IntegrationHub.MessageBroker\eNett.IntegrationHub.Messaging.csproj", "{AE7F3768-5308-4698-AF1A-6186C4CD260A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +61,10 @@ Global
 		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39A16E06-D1E3-45A5-BAEC-DD91C6BFCDBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{972EAB82-615A-404A-A924-A1E847FCC463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{972EAB82-615A-404A-A924-A1E847FCC463}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{972EAB82-615A-404A-A924-A1E847FCC463}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{972EAB82-615A-404A-A924-A1E847FCC463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7F3768-5308-4698-AF1A-6186C4CD260A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7F3768-5308-4698-AF1A-6186C4CD260A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7F3768-5308-4698-AF1A-6186C4CD260A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7F3768-5308-4698-AF1A-6186C4CD260A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

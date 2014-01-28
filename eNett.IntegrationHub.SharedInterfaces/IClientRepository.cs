@@ -12,8 +12,12 @@ namespace eNett.IntegrationHub.SharedInterfaces
     {
         string GetSalesForceIDByECN(int ecn);
 
-        List<Change> GetModifiedClients(DateTime updateTime);
+        List<Change> GetClientChanges(DateTime updateTime);
 
-        List<Change> GetModifiedClientContacts(DateTime updateTime);
+        List<Change> GetClientContactChanges(DateTime updateTime);
+
+        void UpdateClient(Change change);
+
+        void UpdateClientContact(Change change);
     }
 }
